@@ -5,7 +5,7 @@ import struct
 import threading
 
 class BTrDBConnection(object):
-    def __init__(self, btrdb_host, btrdb_port, schema_filepath = "/home/sam/Documents/Research/btrdb/src/github.com/SoftwareDefinedBuildings/btrdb/cpinterface/interface.capnp"):
+    def __init__(self, btrdb_host, btrdb_port, schema_filepath):
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.connect((btrdb_host, btrdb_port))
         
