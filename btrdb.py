@@ -6,10 +6,11 @@ import threading
 
 class BTrDBConnection(object):
     def __init__(self, btrdb_host, btrdb_port, schema_filepath):
+        self.bs = capnp.load(schema_filepath)
+        
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.connect((btrdb_host, btrdb_port))
         
-        self.bs = capnp.load(schema_filepath)
         self.seqno = 0
         self.seqnolock = threading.Lock()
         self.seqmap = {}
@@ -83,6 +84,8 @@ class BTrDBConnection(object):
             if len(receiver.rcvd) == 1:
                 receiver.rcvcond.notify()
             receiver.rcvcond.release()
+        elif new:
+            self.partmsg[et] = sofar
             
     def make_context(self):
         return BTrDBConnection.BTrDBContext(self)
