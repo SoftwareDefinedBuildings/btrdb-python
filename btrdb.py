@@ -288,7 +288,7 @@ class BTrDBContext(object):
         :param uuid: The UUID of the stream to query, as a uuid.UUID object.
         :param start_time: The start of the time range to query, in nanoseconds since the epoch.
         :param end_time: The end of the time range to query, in nanoseconds since the epoch.
-        :param point_width: The width of each point in nanoseconds.
+        :param width: The width of each point in nanoseconds.
         :param depth: The base-two logarithm of the precision, in nanoseconds, at which to divide the time range into points. A depth of 0 (the default) represents exact division. A higher value of this parameter makes the size of the points less precise, but makes the corresponding statistics faster to compute.
         :param version: The version of the stream to query. Defaults to the most recent version.
         :return: A list of dictionaries representing the statistics for each point, and the version number identifying which version of the stream satisfied the query.
