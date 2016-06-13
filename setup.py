@@ -8,6 +8,8 @@ setup(
   author_email = 'samkumar99@gmail.com, michael@steelcode.com',
   url = 'https://github.com/SoftwareDefinedBuildings/btrdb-python',
   download_url = 'https://github.com/SoftwareDefinedBuildings/btrdb-python/tarball/1.0',
+  package_data = { 'btrdb': ['interface.capnp'] },
+  include_package_data = True,
   install_requires = ["pycapnp >= 0.5.8"],
   keywords = ['btrdb', 'timeseries', 'database'],
   classifiers = []
