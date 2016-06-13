@@ -5,6 +5,7 @@ intended to be used with Python's threading library.
 
 import capnp
 import collections
+import os
 import socket
 import struct
 import threading
@@ -21,7 +22,7 @@ class BTrDBConnection(object):
     object are simply wrappers that create a context, make the query, and then
     destroy the context.
     """
-    def __init__(self, btrdb_host, btrdb_port, schema_filepath = 'interface.capnp'):
+    def __init__(self, btrdb_host, btrdb_port, schema_filepath = os.path.realpath('interface.capnp')):
         """
         Construct a new 'BTrDBConnection' object.
         
