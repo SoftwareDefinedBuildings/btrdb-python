@@ -3,7 +3,7 @@ setup(
   name = 'btrdb',
   packages = ['btrdb'],
   version = '1.0',
-  description = 'Bindings to interact with the Berkeley Tree Database'
+  description = 'Bindings to interact with the Berkeley Tree Database',
   author = 'Sam Kumar, Michael P Andersen',
   author_email = 'samkumar99@gmail.com, michael@steelcode.com',
   url = 'https://github.com/SoftwareDefinedBuildings/btrdb-python',
