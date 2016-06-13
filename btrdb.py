@@ -10,6 +10,7 @@ import socket
 import struct
 import threading
 
+
 class BTrDBConnection(object):
     """
     BTrDB Connection encapsulates one connection to a BTrDB. One connection is
@@ -22,7 +23,7 @@ class BTrDBConnection(object):
     object are simply wrappers that create a context, make the query, and then
     destroy the context.
     """
-    def __init__(self, btrdb_host, btrdb_port, schema_filepath = os.path.realpath('interface.capnp')):
+    def __init__(self, btrdb_host, btrdb_port, schema_filepath = os.path.join(os.path.dirname(__file__), 'interface.capnp')):
         """
         Construct a new 'BTrDBConnection' object.
         
