@@ -5,13 +5,13 @@ These BTrDB Bindings for Python are meant to be used with Python's multithreadin
 Here is an example:
 ```
 >>> import uuid
->>> import btrdb
+>>> import btrdbcapnp
 >>>
 >>> # This is the UUID of the stream we are going to interact with
 ... u = uuid.UUID('6390e9df-dfcb-4084-8080-8c719ce751ed')
 >>>
 >>> # Set up the BTrDB Connection and Context
-... connection = btrdb.BTrDBConnection('localhost', 4410)
+... connection = btrdbcapnp.BTrDBConnection('localhost', 4410)
 >>> context = connection.newContext()
 >>>
 >>> # Insert some data
